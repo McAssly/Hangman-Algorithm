@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"sort"
 	"strings"
 )
 
@@ -26,7 +25,9 @@ func algorithm(letters string, words Words, lose int, wordsInSeq []string) (int,
 		numberGuessed := lose
 		for b := 0; b < len(words.Words); b++ {
 			if len(words.Words[b].Content) == len(word) {
-				listPossibleWords = append(listPossibleWords, words.Words[b])
+				for n := 0; n < words.Words[b].Usage; n++ {
+					listPossibleWords = append(listPossibleWords, words.Words[b])
+				}
 			}
 		}
 		for {
@@ -56,9 +57,6 @@ func algorithm(letters string, words Words, lose int, wordsInSeq []string) (int,
 				}
 				listPossibleWords = listPossibleWords2
 			}
-			sort.Slice(listPossibleWords[:], func(i, j int) bool {
-				return listPossibleWords[i].Usage > listPossibleWords[j].Usage
-			})
 			guess := ""
 			/*
 				Instead of random letter from possible letter list, pick random word
