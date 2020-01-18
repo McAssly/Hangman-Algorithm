@@ -1,8 +1,8 @@
 # Hangman Algorithm
 
-WARNING: do not use capitol letters or symbols for the input
+#### **WARNING**: *do not use capitol letters or symbols for the input*
 
-# Method 1 
+## Method 1 
 Make a list of possible words based on the length of given unkowns
 ```go
 listPossibleWords := []Word{}
@@ -13,7 +13,7 @@ for b := 0; b < len(words.Words); b++ {
 }
 ```
 
-# Method 2 
+## Method 2 
 (once guessed correctly) If a word in the list of possible words does not contain the same letter in that position, Then remove that word as possibility
 ```go
 if len(cc) > 0 {
@@ -36,7 +36,7 @@ if len(cc) > 0 {
 }
 ```
   
-# Method 3
+## Method 3
 Store data on how many times a word has been used (given) and based on that data, increase in the possible words list the amount of said word based on its usage amount
 ```go
 listPossibleWords := []Word{}
@@ -49,7 +49,7 @@ for b := 0; b < len(words.Words); b++ {
 }
 ```
   
-# Method 4
+## Method 4
 Instead of a random letter from possible letter list, pick a random word from the possible word list and picks a random letter from the selected word
 
 ```go
