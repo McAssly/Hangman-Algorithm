@@ -1,0 +1,32 @@
+{
+    "pack": [
+        {
+            "words": 2,
+            "chance": 60.599609375
+        },
+        {
+            "words": 1,
+            "chance": 70.06500816345215
+        },
+        {
+            "words": 3,
+            "chance": 60
+        },
+        {
+            "words": 5,
+            "chance": 84.25
+        },
+        {
+            "words": 8,
+            "chance": 97
+        },
+        {
+            "words": 6,
+            "chance": 93
+        },
+        {
+            "words": 4,
+            "chance": 82
+        }
+    ]
+}
