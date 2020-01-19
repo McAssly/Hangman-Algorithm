@@ -42,7 +42,7 @@ Store data on how many times a word has been used (given) and based on that data
 listPossibleWords := []Word{}
 for b := 0; b < len(words.Words); b++ {
   if len(words.Words[b].Content) == len(word) {
-    for n := 0; n < words.Words[b].Usage; n++ {
+    for n := 0; n < words.Words[b].Usage/2; n++ {
       listPossibleWords = append(listPossibleWords, words.Words[b])
     }
   }
