@@ -25,7 +25,7 @@ func algorithm(letters string, words Words, lose int, wordsInSeq []string) (int,
 		numberGuessed := lose
 		for b := 0; b < len(words.Words); b++ {
 			if len(words.Words[b].Content) == len(word) {
-				for n := 0; n < words.Words[b].Usage; n++ {
+				for n := 0; n < words.Words[b].Usage/2; n++ {
 					listPossibleWords = append(listPossibleWords, words.Words[b])
 				}
 			}

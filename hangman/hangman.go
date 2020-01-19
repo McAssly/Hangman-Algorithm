@@ -7,7 +7,8 @@ import (
 	"strings"
 )
 
-// TODO: POLISH IT DIM-WITT
+// FIXME: keeps going after winning (only when word count exceeds 6), causes crash
+// FIXME: some words become impossible to solve, unknown reason
 
 func main() {
 	words := getData()
